@@ -54,8 +54,29 @@ function RandomIntInRange (min, max) {
 }
 
 function Start () {
-  canvas.width = window.innerWidth;
-  canvas.height = window.innerHeight;
+  let devicePixelRatio = window.devicePixelRatio || 1;
+  let backingStoreRatio = ctx.webkitBackingStorePixelRatio ||
+                      ctx.mozBackingStorePixelRatio ||
+                      ctx.msBackingStorePixelRatio ||
+                      ctx.oBackingStorePixelRatio ||
+                      ctx.backingStorePixelRatio || 1;
+  let ratio = devicePixelRatio / backingStoreRatio;
+  // upscale the canvas if the two ratios don't match
+  if (devicePixelRatio !== backingStoreRatio) {
+    console.log(backingStoreRatio);
+    let oldWidth = canvas.width;
+    let oldHeight = canvas.height;
+    canvas.width = oldWidth * ratio;
+    canvas.height = oldHeight * ratio;
+    canvas.style.width = oldWidth + 'px';
+    canvas.style.height = oldHeight + 'px';
+    ctx.scale(ratio, ratio);
+  } else {
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+  }
+
+
 
   ctx.font = "30px sans-serif";
 
