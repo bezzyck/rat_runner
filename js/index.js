@@ -66,7 +66,7 @@ function Start () {
     highscore = localStorage.getItem('highscore');
   }
 
-  player = new Player(25, 0, 120, 120);
+  player = new Player(25, 0, 120, 150);
 
   scoreText = new Text("Счет: " + score, 25, 50, "left", "#ffffff", "45");
   highscoreText = new Text("Рекорд: " + highscore, canvas.width - 25, 50, "right", "#ffffff", "45");
