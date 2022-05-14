@@ -1,10 +1,11 @@
 class Player {
-  constructor (x, y, w, h, c) {
+  constructor (x, y, w, h) {
     this.x = x;
     this.y = y - offset;
     this.w = w;
     this.h = h;
-    this.c = c;
+    this.player = document.getElementById('player')
+    this.playerJumping = document.getElementById('player-jumping')
 
     this.dy = 0;
     this.jumpForce = 20;
@@ -50,10 +51,9 @@ class Player {
   Draw () {
     ctx.beginPath();
     if (this.jumpTimer === 0) {
-      ctx.drawImage(this.c, this.x, this.y, this.w, this.h)
+      ctx.drawImage(this.player, this.x, this.y, this.w, this.h)
     } else {
-      ctx.fillStyle = this.c;
-      ctx.fillRect(this.x, this.y, this.w, this.h);
+      ctx.drawImage(this.playerJumping, this.x, this.y, this.w, this.h)
     }
     ctx.closePath();
   }
