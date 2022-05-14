@@ -18,7 +18,7 @@ let obstacles = [];
 let gameSpeed;
 let keys = {};
 let paused = false;
-let offset = 300;
+let offset = 450;
 
 // Event Listeners
 canvas.addEventListener('touchstart', function (evt) {
@@ -42,7 +42,7 @@ continueGame.addEventListener('click', () => {
 
 // Game Functions
 function SpawnObstacle () {
-  let size = RandomIntInRange(50, 100);
+  let size = RandomIntInRange(80, 120);
   let type = RandomIntInRange(0, 3);
   let obstacle = new Obstacle(canvas.width + size, canvas.height - size - offset, size, size, type);
   obstacles.push(obstacle);
@@ -54,33 +54,10 @@ function RandomIntInRange (min, max) {
 }
 
 function Start () {
-  let devicePixelRatio = window.devicePixelRatio || 1;
-  let backingStoreRatio = ctx.webkitBackingStorePixelRatio ||
-                      ctx.mozBackingStorePixelRatio ||
-                      ctx.msBackingStorePixelRatio ||
-                      ctx.oBackingStorePixelRatio ||
-                      ctx.backingStorePixelRatio || 1;
-  let ratio = devicePixelRatio / backingStoreRatio;
-  // upscale the canvas if the two ratios don't match
-  if (devicePixelRatio !== backingStoreRatio) {
-    console.log(backingStoreRatio);
-    let oldWidth = canvas.width;
-    let oldHeight = canvas.height;
-    canvas.width = oldWidth * ratio;
-    canvas.height = oldHeight * ratio;
-    canvas.style.width = oldWidth + 'px';
-    canvas.style.height = oldHeight + 'px';
-    ctx.scale(ratio, ratio);
-  } else {
-    canvas.width = window.innerWidth;
-    canvas.height = window.innerHeight;
-  }
+  canvas.width = window.innerWidth;
+  canvas.height = window.innerHeight;
 
-
-
-  ctx.font = "30px sans-serif";
-
-  gameSpeed = 3;
+  gameSpeed = 5;
   gravity = 1;
 
   score = 0;
@@ -89,15 +66,15 @@ function Start () {
     highscore = localStorage.getItem('highscore');
   }
 
-  player = new Player(25, 0, 100, 100, document.getElementById('player'));
+  player = new Player(25, 0, 120, 120, document.getElementById('player'));
 
-  scoreText = new Text("Счет: " + score, 25, 25, "left", "#ffffff", "30");
-  highscoreText = new Text("Рекорд: " + highscore, canvas.width - 25, 25, "right", "#ffffff", "30");
+  scoreText = new Text("Счет: " + score, 25, 50, "left", "#ffffff", "45");
+  highscoreText = new Text("Рекорд: " + highscore, canvas.width - 25, 50, "right", "#ffffff", "45");
 
   requestAnimationFrame(Update);
 }
 
-let initialSpawnTimer = 200;
+let initialSpawnTimer = 300;
 let spawnTimer = initialSpawnTimer;
 
 function Update () {

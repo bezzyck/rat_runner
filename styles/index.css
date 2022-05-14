@@ -31,7 +31,7 @@ button {
   background: none;
   border: 2px solid #F5F5DC;
   border-radius: 6px;
-  font-size: 22px;
+  font-size: 50px;
   color: white;
   padding: 16px 10px;
 }
@@ -42,7 +42,3 @@ button#restart {
 button#continue {
   background: green;
 }
-/* .wrapper {
-  width: 100vw;
-  height: 100vh;
-} */
