@@ -1,10 +1,94 @@
-* { margin:0; padding:0; }
+* {
+  font-family: 'Roboto';
+  margin:0;
+  padding:0; 
+}
+
+h2 {
+  font-family: 'Roboto';
+  font-size: 80px;
+}
+p {
+  font-size: 50px;
+}
 
 body {
   width: 100vw;
   height: 100vh;
+  overflow: hidden;
+  scrollbar-width: none;
 }
 
+/* start screen */
+#start-screen {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  background: #2e263f;
+}
+
+.start-screen-buttons-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.start-image {
+  width: 100%;
+}
+
+.copyright {
+  position: absolute;
+  bottom: 2%;
+}
+.copyright-text {
+  text-align: center;
+  font-size: 30px;
+  color: #7c7797;
+}
+
+/* game */
+#game {
+  display: none;
+}
+
+/* buttons */
+button {
+  outline: none;
+  background: none;
+  border: 2px solid #6996a5;
+  border-radius: 10px;
+  font-size: 50px;
+  color: #ffffff;
+  padding: 16px 10px;
+}
+
+button.answer-button {
+  text-transform: uppercase;
+  background: #6996a5;
+}
+button#start {
+  text-transform: uppercase;
+  background: #6996a5;
+  padding: 30px 170px;
+}
+button#close-rules {
+  text-transform: uppercase;
+  background: #6996a5;
+  margin-top: 25px;
+  padding: 25px 20px;
+}
+button#open-rules {
+  margin-top: 20%;
+  text-transform: uppercase;
+  background: #6996a5;
+  padding: 30px 130px;
+}
+
+/* modal */
 #modal-wrapper {
   display: none;
 
@@ -21,24 +105,39 @@ body {
 }
 
 .modal {
+  width: 80%;
   padding: 40px;
-  border-radius: 6px;
-  background: #000;
+  border-radius: 30px;
+  background: white;
 }
 
-button {
-  outline: none;
-  background: none;
-  border: 2px solid #F5F5DC;
-  border-radius: 6px;
-  font-size: 50px;
-  color: white;
-  padding: 16px 10px;
+/* modal wrapper rule*/
+#modal-wrapper-rules {
+  display: none;
+
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, .4);
+
+  align-items: center;
+  justify-content: center;
 }
 
-button#restart {
-  background: red;
+.rules {
+  margin-top: 40px;
 }
-button#continue {
-  background: green;
+
+p.rule:not(:first-child) {
+  margin-top: 20px;
+}
+
+.rules-button-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-top: 40px;
 }

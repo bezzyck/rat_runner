@@ -3,10 +3,27 @@
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles/index.css">
   <title>Крыска алиска</title>
 </head>
 <body>
+
+  <div id="start-screen">
+    <div class="start-screen-buttons-wrapper">
+      <button id="start">старт</button>
+      <button id="open-rules">правила</button>
+    </div>
+    
+    <img class="start-image" src="img/start-screen.png" alt="start">
+
+    <div class="copyright">
+      <p class="copyright-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus eveniet, dolorum fugit eum voluptatum omnis vitae !</p>
+    </div>
+
+  </div>
 
   <canvas id="game">
     <img id="player" src="img/player.png">
@@ -21,15 +38,36 @@
 
   <div id="modal-wrapper">
     <div class="modal">
-      <button id="restart">Рестарт</button>
-      <button id="continue">Продолжить</button>
+      <p id="question"></p>
+      <button class="answer-button" value="true">Верно</button>
+      <button class="answer-button" value="false">Неверно</button>
     </div>
   </div>
+
+  <div id="modal-wrapper-rules">
+    <div class="modal">
+      <h2>Это правила игры</h2>
+
+      <div class="rules">
+        <p class="rule">1) Lorem ipsum dolor sit amet.</p>
+        <p class="rule">2) Lorem ipsum dolor sit amet.</p>
+        <p class="rule">3) Lorem ipsum dolor sit amet.</p>
+        <p class="rule">4) Lorem ipsum dolor sit amet.</p>
+      </div>
+      
+      <div class="rules-button-wrapper">
+        <button id="close-rules">Хорошо!</button>
+      </div>
+    </div>
+  </div>
+
   
   
   <script src="js/player.js"></script>
   <script src="js/obstacle.js"></script>
   <script src="js/text.js"></script>
+  <script src="js/questions.js"></script>
   <script src="js/index.js"></script>
+  <script src="js/start_screen.js"></script>
 </body>
 </html>
