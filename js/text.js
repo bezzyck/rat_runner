@@ -1,3 +1,4 @@
+// Класс для текста
 class Text {
   constructor (t, x, y, a, c, s) {
     this.t = t;

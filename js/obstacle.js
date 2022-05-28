@@ -1,3 +1,4 @@
+// Класс для препятствия
 class Obstacle {
   constructor (x, y, w, h, t) {
     this.x = x;

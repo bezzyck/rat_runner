@@ -3,14 +3,21 @@
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  
+  <!-- Подключение шрифтов -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+  
+  <!-- Подключение таблицы стилей -->
   <link rel="stylesheet" href="styles/index.css">
+
+  <!-- Заголовок сайта в браузере -->
   <title>Крыска алиска</title>
 </head>
 <body>
 
+  <!-- Стартовый экран -->
   <div id="start-screen">
     <div class="start-screen-buttons-wrapper">
       <button id="start">старт</button>
@@ -18,13 +25,12 @@
     </div>
     
     <img class="start-image" src="img/start-screen.png" alt="start">
-
     <div class="copyright">
       <p class="copyright-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus eveniet, dolorum fugit eum voluptatum omnis vitae !</p>
     </div>
-
   </div>
 
+  <!-- Канвас куда биндится js для игрыы -->
   <canvas id="game">
     <img id="player" src="img/player.png">
     <img id="player-jumping" src="img/player-jumping.png">
@@ -36,15 +42,27 @@
     <img id="obstacle_3" src="img/obstacle_3.png">
   </canvas>
 
-  <div id="modal-wrapper">
+  <!-- Модальное окно для вопросов -->
+  <div id="modal-interview" class="modal-wrapper">
     <div class="modal">
       <p id="question"></p>
-      <button class="answer-button" value="true">Верно</button>
-      <button class="answer-button" value="false">Неверно</button>
+
+      <button id="answer-button-true" class="answer-button"></button>
+      <button id="answer-button-false" class="answer-button"></button>
     </div>
   </div>
 
-  <div id="modal-wrapper-rules">
+  <!-- Модальное окно результатов опроса -->
+  <div id="modal-result" class="modal-wrapper">
+    <div class="modal">
+      <p id="result-text"></p>
+
+      <button id="action" class="answer-button"></button>
+    </div>
+  </div>
+
+  <!-- Модальное окно для правил игры -->
+  <div id="modal-rules" class="modal-wrapper">
     <div class="modal">
       <h2>Это правила игры</h2>
 
@@ -61,13 +79,21 @@
     </div>
   </div>
 
+
   
-  
+  <!-- Подключение классов -->
   <script src="js/player.js"></script>
   <script src="js/obstacle.js"></script>
   <script src="js/text.js"></script>
+
+  <!-- Подключение компонентов -->
   <script src="js/questions.js"></script>
-  <script src="js/index.js"></script>
+  <script src="js/interview.js"></script>
+
+  <!-- Подключение игры -->
+  <script src="js/game.js"></script>
+
+  <!-- Подключение главного экрана -->
   <script src="js/start_screen.js"></script>
 </body>
 </html>

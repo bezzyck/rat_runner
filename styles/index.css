@@ -67,7 +67,6 @@ button {
 }
 
 button.answer-button {
-  text-transform: uppercase;
   background: #6996a5;
 }
 button#start {
@@ -89,7 +88,7 @@ button#open-rules {
 }
 
 /* modal */
-#modal-wrapper {
+.modal-wrapper {
   display: none;
 
   position: fixed;
@@ -109,21 +108,6 @@ button#open-rules {
   padding: 40px;
   border-radius: 30px;
   background: white;
-}
-
-/* modal wrapper rule*/
-#modal-wrapper-rules {
-  display: none;
-
-  position: fixed;
-  top: 0;
-  right: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, .4);
-
-  align-items: center;
-  justify-content: center;
 }
 
 .rules {

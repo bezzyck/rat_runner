@@ -1,3 +1,4 @@
+// Класс для игрока
 class Player {
   constructor (x, y, w, h) {
     this.x = x;
@@ -15,17 +16,16 @@ class Player {
   }
 
   Animate () {
-    // Jump
+    // Прыжок
     if (keys['touch']) {
       this.Jump();
     } else {
       this.jumpTimer = 0;
     }
 
-    // console.log(this.y);
     this.y += this.dy;
 
-    // Gravity
+    // Гравитация
     if (this.y + this.h < canvas.height - offset) {
       this.dy += gravity;
       this.grounded = false;
@@ -38,6 +38,7 @@ class Player {
     this.Draw();
   }
 
+  // Функция прыжка
   Jump () {
     if (this.grounded && this.jumpTimer == 0) {
       this.jumpTimer = 1;
