@@ -110,6 +110,28 @@ button#open-rules {
   background: white;
 }
 
+.modal-interview-buttons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+.modal-interview-button:last-child {
+  margin-top: 12px;
+}
+
+#question-image {
+  width: 100%;
+  border-radius: 30px;
+}
+
+#question {
+  margin-top: 30px;
+  text-align: center;
+}
+
 .rules {
   margin-top: 40px;
 }

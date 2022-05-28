@@ -1,7 +1,8 @@
 // HTML элементы модального окна опроса
 const modalInterview = document.getElementById('modal-interview')
-      answerButtonTrue = document.getElementById('answer-button-true')
-      answerButtonFalse = document.getElementById('answer-button-false');
+      questionImage = modalInterview.querySelector('#question-image')
+      answerButtonTrue = modalInterview.querySelector('#answer-button-true')
+      answerButtonFalse = modalInterview.querySelector('#answer-button-false');
 
 // HTML элементы модального окна результатов
 const modalResult = document.getElementById('modal-result')
@@ -15,6 +16,10 @@ function askQuestion(q) {
   current_question = q[rand];
 
   if (current_question) {
+    if (current_question.imgUrl) {
+      questionImage.src = current_question.imgUrl
+    }
+
     modalInterview.querySelector('#question').innerText = current_question.question;
 
     answerButtonTrue.innerText = answerButtonTrue.value = current_question.true_answer;
