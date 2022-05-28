@@ -42,14 +42,14 @@
     <img id="obstacle_3" src="img/obstacle_3.png">
   </canvas>
 
-  <!-- Модальное окно для вопросов -->
+  <!-- Модальное окно для опроса -->
   <div id="modal-interview" class="modal-wrapper">
     <div class="modal">
 
       <img id="question-image" src="" alt="question-image">
       <p id="question"></p>
 
-      <div class="modal-interview-buttons">
+      <div id="modal-interview-buttons" class="modal-interview-buttons">
         <button id="answer-button-true" class="answer-button modal-interview-button"></button>
         <button id="answer-button-false" class="answer-button modal-interview-button"></button>
       </div>
@@ -59,9 +59,13 @@
   <!-- Модальное окно результатов опроса -->
   <div id="modal-result" class="modal-wrapper">
     <div class="modal">
+      <img id="result-image" src="" alt="result-image">
       <p id="result-text"></p>
 
-      <button id="action" class="answer-button"></button>
+      <div class="modal-interview-buttons">
+        <button id="action" class="answer-button"></button>
+      </div>
+
     </div>
   </div>
 
