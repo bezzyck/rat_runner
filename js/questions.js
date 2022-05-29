@@ -1,7 +1,7 @@
 // Массив вопросов
 const questions = [
   [
-    // email adress
+    // Вопросы и ответы для иконки "Письмо"
     {
       imgUrl: 'img/questions/email-adress.png',
       question: '', 
@@ -17,12 +17,12 @@ const questions = [
     {
       imgUrl: 'img/questions/hard-password.png',
       question: '', 
-      true_answer: 'Придумать новый', 
-      false_answer: 'Оставить так'
+      true_answer: 'Оставить так', 
+      false_answer: 'Придумать новый'
     }
   ],
   [
-    // message
+    // Вопросы и ответы для иконки "Сообщение"
     {
       imgUrl: 'img/questions/selfie.png',
       question: 'Алиске очень нравится, как она получилась на фото.', 
@@ -37,7 +37,7 @@ const questions = [
     }
   ],
   [
-    // computer
+    // Вопросы и ответы для иконки "Компьютер"
     {
       imgUrl: 'img/questions/TV.png',
       question: 'Как долго можно смотреть телевизор?',
@@ -52,7 +52,7 @@ const questions = [
     }
   ],
   [
-    // paper
+    // Вопросы и ответы для иконки "Газета"
     {
       imgUrl: 'img/questions/you-win.png',
       question: 'Чтобы получить приз, введите свои данные!', 

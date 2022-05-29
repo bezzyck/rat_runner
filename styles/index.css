@@ -1,3 +1,4 @@
+/* ======================================================= */
 * {
   font-family: 'Roboto';
   margin:0;
@@ -19,6 +20,7 @@ body {
   scrollbar-width: none;
 }
 
+/* ======================================================= */
 /* start screen */
 #start-screen {
   display: flex;
@@ -49,7 +51,7 @@ body {
   font-size: 30px;
   color: #7c7797;
 }
-
+/* ======================================================= */
 /* game */
 #game {
   display: none;
@@ -86,7 +88,7 @@ button#open-rules {
   background: #6996a5;
   padding: 30px 130px;
 }
-
+/* ======================================================= */
 /* modal */
 .modal-wrapper {
   display: none;
@@ -98,7 +100,6 @@ button#open-rules {
   height: 100%;
   background: rgba(0, 0, 0, .4);
 
-  /* display: flex; */
   align-items: center;
   justify-content: center;
 }
@@ -147,3 +148,4 @@ p.rule:not(:first-child) {
 
   margin-top: 40px;
 }
+/* ======================================================= */
