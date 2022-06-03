@@ -44,8 +44,8 @@ function callResultModal(result = false) {
   modalInterview.style.display = 'none';
   
   if (result) {
-    resultImage.src = 'img/you-winner.png'
-    resultText.innerText = "text";
+    resultImage.src = 'img/you-winner.png';
+    resultText.innerText = current_question.description || '';
     buttonActionAfterInterview.innerText = "Продолжить играть";
     
     buttonActionAfterInterview.addEventListener('click', () => {
@@ -55,8 +55,8 @@ function callResultModal(result = false) {
     }, { once: true })
 
   } else {
-    resultImage.src = 'img/you-lose.png'
-    resultText.innerText = "text";
+    resultImage.src = 'img/you-lose.png';
+    resultText.innerText = current_question.description || '';
     buttonActionAfterInterview.innerText = "Начать заново";
 
     buttonActionAfterInterview.addEventListener('click', () => {

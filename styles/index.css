@@ -88,6 +88,9 @@ button#open-rules {
   background: #6996a5;
   padding: 30px 130px;
 }
+button#action {
+  margin-top: 40px;
+}
 /* ======================================================= */
 /* modal */
 .modal-wrapper {
@@ -126,6 +129,11 @@ button#open-rules {
 #question-image, #result-image {
   width: 100%;
   border-radius: 30px;
+}
+
+#result-image {
+  height: 192px;
+  object-fit: cover;
 }
 
 #question, #result-text {
